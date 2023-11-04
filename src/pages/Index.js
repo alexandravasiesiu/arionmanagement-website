@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../assets/images/ArionManagementLogo2.png'
 
 const meta = {
   title: '',
@@ -10,6 +12,8 @@ const meta = {
 };
 
 export default function Index() {
+  const navigate = useNavigate();
+
   return (
     <React.Fragment>
       <HelmetProvider>
@@ -20,18 +24,17 @@ export default function Index() {
           <nav className='relative py-6 mb-12 sm:mb-32 bg-white'>
             <div className='container px-4 mx-auto'>
               <div className='flex items-center'>
-                <a className='inline-block text-lg font-bold' href='#'>
+                <Link className='inline-block text-lg font-bold' to='/'>
                   <img
                     className='h-10'
-                    src='images/ArionManagementLogo2.png'
+                    src={logo}
                     alt=''
                     width='auto'
                   />
-                </a>
+                </Link>
                 <div className='lg:hidden ml-auto'>
                   <button
                     className='navbar-burger flex w-12 h-12 items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-md transition duration-200'
-                    contentEditable='false'
                   >
                     <svg
                       width={24}
@@ -66,112 +69,28 @@ export default function Index() {
                 </div>
                 <ul className='hidden lg:flex ml-14 lg:w-auto lg:space-x-12'>
                   <li className='group relative'>
-                    <a
+                    <Link
                       className='inline-block text-green-400 hover:text-orange-900 font-medium'
-                      href='#'
+                      to='#about_section'
                     >
                       Despre noi
-                    </a>
-                    <div className='hidden group-hover:block absolute top-full left-0 min-w-max max-w-xs p-4 z-30'>
-                      <div className='-mb-2 ml-8 w-4 h-4 rounded-sm bg-white border-l border-t border-gray-200 transform rotate-45' />
-                      <div className='w-full max-w-xs bg-white border border-gray-100 rounded-3xl pt-4 pb-4 px-4'>
-                        <div className='pb-3 mb-3 border-b border-gray-100'>
-                          <a
-                            className='block py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg'
-                            href='#'
-                          >
-                            Featured
-                          </a>
-                          <a
-                            className='block py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg'
-                            href='#'
-                          >
-                            Solutions
-                          </a>
-                        </div>
-                        <div className='pb-3 mb-3 border-b border-gray-100'>
-                          <a
-                            className='flex mb-2 items-center py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg'
-                            href='#'
-                          >
-                            <img
-                              src='saturn-assets/images/headers/icon-download.svg'
-                              alt=''
-                            />
-                            <span className='ml-3'>Download</span>
-                          </a>
-                          <a
-                            className='flex mb-2 items-center py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg'
-                            href='#'
-                          >
-                            <img
-                              src='saturn-assets/images/headers/icon-slack.svg'
-                              alt=''
-                            />
-                            <span className='ml-3'>Community</span>
-                          </a>
-                          <a
-                            className='flex mb-2 items-center py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg'
-                            href='#'
-                          >
-                            <img
-                              src='saturn-assets/images/headers/icon-help.svg'
-                              alt=''
-                            />
-                            <span className='ml-3'>Help</span>
-                          </a>
-                        </div>
-                        <div className='flex items-center pb-3 mb-3 border-b border-gray-100'>
-                          <a
-                            className='inline-block px-4 py-3 mr-6 text-sm font-semibold text-orange-900 hover:text-gray-900'
-                            href='#'
-                          >
-                            Sign In
-                          </a>
-                          <a
-                            className='inline-block py-3 px-4 text-sm font-semibold text-orange-900 hover:text-white border border-gray-200 hover:border-orange-600 hover:bg-orange-900 rounded-md transition duration-200'
-                            href='#'
-                          >
-                            Create an account
-                          </a>
-                        </div>
-                        <div className='flex items-center'>
-                          <div className='flex w-10 h-10 items-center justify-center bg-orange-50 rounded-full'>
-                            <img
-                              src='saturn-assets/images/headers/icon-email-me.svg'
-                              alt=''
-                            />
-                          </div>
-                          <div className='ml-3'>
-                            <span className='block text-xs text-gray-500'>
-                              Drop us a line
-                            </span>
-                            <a
-                              className='text-sm font-semibold text-black hover:text-orange-900'
-                              href='#'
-                            >
-                              hello@shuffle.dev
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className='inline-block hover:text-orange-900 font-medium text-green-400'
-                      href='#'
+                      to='#services_section'
                     >
                       Servicii
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className='inline-block hover:text-orange-900 font-medium text-green-400'
-                      href='#'
+                      to='#contact_section'
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -188,14 +107,13 @@ export default function Index() {
                 <div className='pl-8 md:pl-12 lg:pl-24 border-l-2 border-orange-600 mb-16'>
                   <h1 className='font-heading text-4xl xs:text-6xl md:text-8xl xl:text-10xl font-bold text-white mb-8 sm:mb-14'>
                     <span>Descoperiți cu noi</span>
-                    <span className='font-serif italic'>succesul</span>
+                    <span className='font-serif italic'>&nbsp;succesul</span>
                   </h1>
                 </div>
                 <div className='lg:flex mb-20 items-center'>
                   <div className='max-w-md mb-12 lg:mb-0 lg:mr-8'>
                     <p
                       className='text-xl font-semibold text-white'
-                      contentEditable='false'
                     >
                       La Arion Management, ne străduim să devenim catalizatorul
                       succesului dumneavoastră. Viziunea noastră este de a
@@ -205,9 +123,9 @@ export default function Index() {
                   </div>
                   <div>
                     <div>
-                      <a
+                      <Link
                         className='relative group inline-block w-full sm:w-auto py-4 px-6 text-white font-semibold bg-yellow-800 rounded-md overflow-hidden'
-                        href='#'
+                        to='#contact_section'
                       >
                         <div className='absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500' />
                         <div className='relative flex items-center justify-center'>
@@ -227,7 +145,7 @@ export default function Index() {
                             </svg>
                           </span>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -369,12 +287,12 @@ export default function Index() {
             </nav>
           </div>
         </section>
-        <section className='relative py-20 lg:py-24 bg-gray-800 overflow-hidden'>
+        <section id="about_section" className='relative py-20 lg:py-24 bg-gray-800 overflow-hidden'>
           <div className='relative container px-4 mx-auto'>
             <div className='text-center mb-18'>
               <h1 className='font-heading text-5xl xs:text-6xl md:text-7xl font-bold text-white mb-12'>
                 <span>Citește acum totul</span>
-                <span className='block font-serif italic'>despre noi</span>
+                <span className='block font-serif italic'>&nbsp;despre noi</span>
               </h1>
             </div>
             <div className='max-w-lg lg:max-w-3xl xl:max-w-5xl mx-auto'>
@@ -433,14 +351,14 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className='relative py-20 md:py-32 overflow-hidden bg-gray-50'>
+        <section id="services_section" className='relative py-20 md:py-32 overflow-hidden bg-gray-50'>
           <div className='relative container px-4 mx-auto'>
             <div className='max-w-7xl mx-auto'>
               <div className='text-center mb-24'>
                 <h1 className='font-heading text-5xl xs:text-6xl md:text-7xl font-bold'>
                   <span className='text-orange-700'>Tu întrebi? Noi avem</span>
                   <span className='font-serif italic text-orange-700'>
-                    soluția
+                  &nbsp;soluția
                   </span>
                 </h1>
               </div>
@@ -500,7 +418,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className='relative py-20 md:py-32 overflow-hidden bg-orange-700'>
+        <section id="contact_section" className='relative py-20 md:py-32 overflow-hidden bg-orange-700'>
           <img
             className='absolute top-0 left-0 md:mt-24'
             src='saturn-assets/images/contact/dots-side-1.svg'
@@ -518,7 +436,7 @@ export default function Index() {
                   <span className='text-white'>
                     Sună sau trimite-ne un mesaj
                   </span>
-                  <span className='font-serif italic text-white'>ACUM</span>
+                  <span className='font-serif italic text-white'>&nbsp;ACUM</span>
                 </h1>
               </div>
               <div className='max-w-md lg:max-w-5xl mx-auto'>
@@ -544,7 +462,7 @@ export default function Index() {
                             Telefon
                           </span>
                           <span className='block text-lg font-semibold text-white'>
-                            +1 891 4937
+                          0745 357 905
                           </span>
                         </div>
                       </div>
@@ -575,7 +493,7 @@ export default function Index() {
                             Adresă
                           </span>
                           <span className='block text-lg font-semibold text-white'>
-                            1686 Geraldine Lane
+                          Alba Iulia, Str. Tudor Vladimirescu, Nr. 22C, județ ALBA
                           </span>
                         </div>
                       </div>
@@ -595,38 +513,38 @@ export default function Index() {
           <div className='relative container px-4 mx-auto'>
             <div className='max-w-7xl mx-auto'>
               <div className='pb-8 mb-15 border-b border-gray-100 text-center'>
-                <a className='inline-block' href='#'>
+                <Link className='inline-block' to='/'>
                   <img
                     className='h-15'
-                    src='images/ArionManagementLogo2.png'
+                    src={logo}
                     alt=''
                   />
-                </a>
+                </Link>
               </div>
               <div className='flex flex-wrap -mb-5 -mx-6 items-center justify-center'>
                 <div className='px-6 mb-5'>
-                  <a
+                  <Link
                     className='inline-block text-white font-medium hover:text-orange-900'
-                    href='#'
+                    to='#about_section'
                   >
                     Despre noi
-                  </a>
+                  </Link>
                 </div>
                 <div className='px-6 mb-5'>
-                  <a
+                  <Link
                     className='inline-block text-white font-medium hover:text-orange-900'
-                    href='#'
+                    to='#services_section'
                   >
                     Servicii
-                  </a>
+                  </Link>
                 </div>
                 <div className='px-6 mb-5'>
-                  <a
+                  <Link
                     className='inline-block text-white font-medium hover:text-orange-900'
-                    href='#'
+                    to='#contact_section'
                   >
                     Contact
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className='mt-15 text-center'>
