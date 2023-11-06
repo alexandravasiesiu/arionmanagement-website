@@ -23,7 +23,7 @@ export default function Index() {
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
       <>
-        <section className='relative overflow-hidden bg-orange-700 h-screen'>
+        <section className='relative overflow-hidden bg-orange-700'>
           <nav className='relative py-6 mb-12 sm:mb-32 bg-white'>
             <div className='container px-4 mx-auto'>
               <div className='flex items-center'>
