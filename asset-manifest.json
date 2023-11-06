@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.cc87f297.js",
+    "main.js": "/static/js/main.d96149c1.js",
     "static/media/ArionManagementLogo2.png": "/static/media/ArionManagementLogo2.f74007e502e9e82bfe24.png",
     "index.html": "/index.html",
-    "main.cc87f297.js.map": "/static/js/main.cc87f297.js.map"
+    "main.d96149c1.js.map": "/static/js/main.d96149c1.js.map"
   },
   "entrypoints": [
-    "static/js/main.cc87f297.js"
+    "static/js/main.d96149c1.js"
   ]
 }
